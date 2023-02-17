@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
 const request = require("request");
-// const PORT = process.env.PORT | 3000;
 
 // bf6fc6086277ba3b60d16c2c6795b451-us10
 // e76eca59bd
