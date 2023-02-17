@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
 const request = require("request");
-const PORT = process.env.PORT | 3000;
+// const PORT = process.env.PORT | 3000;
 
 // bf6fc6086277ba3b60d16c2c6795b451-us10
 // e76eca59bd
@@ -12,7 +12,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(PORT, () => console.log(`server listening on port: ${PORT}`));
+app.listen(process.env.PORT, () => console.log(`server listening on heroku port`));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/signup.html");
